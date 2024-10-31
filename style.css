@@ -9,10 +9,10 @@
 body {
     background-image: url("https://bestanimations.com/media/fireworks2/1589967346ba-pretty-delicate-firework-animated-gif-image.gif");
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
     height: 100vh;
     width: 100vw;
-    background-position: fixed;
-    background-size: cover;
     overflow: hidden;
     cursor: pointer;
 }
@@ -23,6 +23,7 @@ body {
     color: yellow;
     font-size: large;
     font-style: italic;
+    padding: 20px; /* Added padding for better spacing on all screens */
 }
 
 /* Styling for images and heading elements */
@@ -41,7 +42,7 @@ body {
 
 h1 {
     font-size: 2.5rem;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
     font-weight: 900;
     animation: spanimation 1s ease-in-out infinite;
 }
@@ -49,28 +50,29 @@ h1 {
 .diwali_diyasLeft, .diwali_diyasRight {
     width: 80px;
     height: 80px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 h2 {
     font-weight: 500;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
     animation: spanimation 1s ease-in-out infinite;
 }
 
 .diyas {
     width: 500px;
     height: 280px;
+    margin: 20px auto;
 }
 
 /* Positioning for the bottom lights */
 .lightsDownLeft {
-    margin-top: 140px;
+    margin-top: 40px;
     float: left;
 }
 
 .lightsDownRight {
-    margin-top: 140px;
+    margin-top: 40px;
     float: right;
 }
 
@@ -91,23 +93,24 @@ h2 {
 /* Media queries for mobile responsiveness */
 @media screen and (max-width: 768px) {
 
+    /* Adjust background for mobile */
     body {
-        background-size: contain;
+        background-size: cover;
     }
 
     /* Reduce font size and image size for mobile */
     h1 {
         font-size: 1.8rem;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .diwali_diyasLeft, .diwali_diyasRight {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
     }
 
     .diyas {
@@ -115,25 +118,21 @@ h2 {
         height: 180px;
     }
 
+    /* Resize lights for mobile */
     .lightsUpLeft, .lightsUpRight, .lightsDownLeft, .lightsDownRight {
         width: 100px;
         height: 100px;
     }
 
-    /* Adjust layout for mobile screens */
-    .lightsUpLeft, .lightsDownLeft {
+    /* Remove float and center the images */
+    .lightsUpLeft, .lightsUpRight, .lightsDownLeft, .lightsDownRight {
         float: none;
-        margin: 0 auto;
+        margin: 10px auto;
+        display: block;
     }
 
-    .lightsUpRight, .lightsDownRight {
-        float: none;
-        margin: 0 auto;
-    }
-
-    /* Main content spacing adjustments */
+    /* Ensure main content spacing is adjusted */
     .main-content {
-        padding: 20px;
         font-size: medium;
     }
 }
