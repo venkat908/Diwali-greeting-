@@ -1,9 +1,11 @@
+/* Reset margin and padding */
 * {
-    border:0;
+    border: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body styling with background GIF */
 body {
     background-image: url("https://bestanimations.com/media/fireworks2/1589967346ba-pretty-delicate-firework-animated-gif-image.gif");
     background-repeat: no-repeat;
@@ -15,6 +17,7 @@ body {
     cursor: pointer;
 }
 
+/* Main content centered */
 .main-content {
     text-align: center;
     color: yellow;
@@ -22,76 +25,115 @@ body {
     font-style: italic;
 }
 
-.lightsUpLeft{
-    float: left;
+/* Styling for images and heading elements */
+.lightsUpLeft, .lightsUpRight, .lightsDownLeft, .lightsDownRight {
     width: 150px;
     height: 150px;
 }
 
-.lightsUpRight{
+.lightsUpLeft {
+    float: left;
+}
+
+.lightsUpRight {
     float: right;
-    width: 150px;
-    height: 150px;
 }
 
 h1 {
-    align-items: center;
-    justify-content: space-around;
+    font-size: 2.5rem;
     margin-bottom: 70px;
     font-weight: 900;
     animation: spanimation 1s ease-in-out infinite;
 }
 
-.diwali_diyasLeft{
-    margin-top: 30px;
-    align-items: center;
+.diwali_diyasLeft, .diwali_diyasRight {
     width: 80px;
     height: 80px;
-}
-
-.diwali_diyasRight{
     margin-top: 30px;
-    width: 80px;
-    height: 80px;
 }
 
 h2 {
-    align-items: center;
-    justify-content: space-around;
-    margin-bottom: 70px;
     font-weight: 500;
+    margin-bottom: 70px;
     animation: spanimation 1s ease-in-out infinite;
 }
 
 .diyas {
-    align-items: center;
     width: 500px;
     height: 280px;
 }
 
-.lightsDownLeft{
+/* Positioning for the bottom lights */
+.lightsDownLeft {
     margin-top: 140px;
     float: left;
-    width: 150px;
-    height: 150px;
 }
 
-.lightsDownRight{
+.lightsDownRight {
     margin-top: 140px;
     float: right;
-    width: 150px;
-    height: 150px;
 }
 
+/* Keyframes animation for text shadow */
 @keyframes spanimation {
     from {
         text-shadow: 0px 0px 50px rgb(165, 62, 22), 0px 0px 20px rgb(165, 62, 22),
-        0px 0px 30px #ffd700, 0px 0px 40px rgb(212,65,6),
-        0px 0px 50px rgb(240,75,9);
+        0px 0px 30px #ffd700, 0px 0px 40px rgb(212, 65, 6),
+        0px 0px 50px rgb(240, 75, 9);
     }
     to {
         text-shadow: 0px 0px 40px rgb(16, 197, 46), 0px 0px 20px gold,
-        0px 0px 30px rgb(212,65,6), 0px 0px 60px rgb(221,195,25,0.774),
-        0px 0px 50px rgb(16,175,43,0.863);
+        0px 0px 30px rgb(212, 65, 6), 0px 0px 60px rgb(221, 195, 25, 0.774),
+        0px 0px 50px rgb(16, 175, 43, 0.863);
+    }
+}
+
+/* Media queries for mobile responsiveness */
+@media screen and (max-width: 768px) {
+
+    body {
+        background-size: contain;
+    }
+
+    /* Reduce font size and image size for mobile */
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 50px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .diwali_diyasLeft, .diwali_diyasRight {
+        width: 50px;
+        height: 50px;
+    }
+
+    .diyas {
+        width: 300px;
+        height: 180px;
+    }
+
+    .lightsUpLeft, .lightsUpRight, .lightsDownLeft, .lightsDownRight {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Adjust layout for mobile screens */
+    .lightsUpLeft, .lightsDownLeft {
+        float: none;
+        margin: 0 auto;
+    }
+
+    .lightsUpRight, .lightsDownRight {
+        float: none;
+        margin: 0 auto;
+    }
+
+    /* Main content spacing adjustments */
+    .main-content {
+        padding: 20px;
+        font-size: medium;
     }
 }
