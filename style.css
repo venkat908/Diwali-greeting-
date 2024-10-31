@@ -1,138 +1,87 @@
-/* Reset margin and padding */
+@import url(https://fonts.googleapis.com/css?family=Bad+Script|Lato:400,700);
 * {
-    border: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bad Script", cursive;
 }
-
-/* Body styling with background GIF */
+main {
+  display: inline-block;
+}
 body {
-    background-image: url("https://bestanimations.com/media/fireworks2/1589967346ba-pretty-delicate-firework-animated-gif-image.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  background: #111;
 }
-
-/* Main content centered */
-.main-content {
-    text-align: center;
-    color: yellow;
-    font-size: large;
-    font-style: italic;
-    padding: 20px; /* Added padding for better spacing on all screens */
-}
-
-/* Styling for images and heading elements */
-.lightsUpLeft, .lightsUpRight, .lightsDownLeft, .lightsDownRight {
-    width: 150px;
-    height: 150px;
-}
-
-.lightsUpLeft {
-    float: left;
-}
-
-.lightsUpRight {
-    float: right;
-}
-
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    font-weight: 900;
-    animation: spanimation 1s ease-in-out infinite;
-}
-
-.diwali_diyasLeft, .diwali_diyasRight {
-    width: 80px;
-    height: 80px;
-    margin-top: 20px;
-}
-
 h2 {
-    font-weight: 500;
-    margin-bottom: 50px;
-    animation: spanimation 1s ease-in-out infinite;
+  display: flex;
+  color: transparent;
+  font-size: 15vw;
+}
+h2 span {
+  animation: animate 3s linear infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+footer {
+  margin-top: 4vh;
+  /* color: transparent; */
+  color: white;
+  text-align: right;
+  align-content: right;
+  font-size: 3vw;
+}
+footer span {
+  animation: animate1 3s linear infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+@keyframes animate {
+  0% {
+    color: #fff;
+    filter: blur(2px) hue-rotate(0deg);
+    text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
+      0 0 80px #00b3ff, 0 0 120px #00b3ff, 0 0 200px #00b3ff, 0 0 300px #00b3ff,
+      0 0 400px #00b3ff;
+  }
+  30%,
+  70% {
+    color: #fff;
+    filter: blur(2px) hue-rotate(360deg);
+    text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
+      0 0 80px #00b3ff, 0 0 120px #00b3ff, 0 0 200px #00b3ff;
+  }
+  100% {
+    color: transparent;
+    box-shadow: none;
+    filter: blur(2px) hue-rotate(0deg);
+  }
 }
 
-.diyas {
-    width: 500px;
-    height: 280px;
-    margin: 20px auto;
-}
 
-/* Positioning for the bottom lights */
-.lightsDownLeft {
-    margin-top: 40px;
-    float: left;
-}
-
-.lightsDownRight {
-    margin-top: 40px;
-    float: right;
-}
-
-/* Keyframes animation for text shadow */
-@keyframes spanimation {
-    from {
-        text-shadow: 0px 0px 50px rgb(165, 62, 22), 0px 0px 20px rgb(165, 62, 22),
-        0px 0px 30px #ffd700, 0px 0px 40px rgb(212, 65, 6),
-        0px 0px 50px rgb(240, 75, 9);
-    }
-    to {
-        text-shadow: 0px 0px 40px rgb(16, 197, 46), 0px 0px 20px gold,
-        0px 0px 30px rgb(212, 65, 6), 0px 0px 60px rgb(221, 195, 25, 0.774),
-        0px 0px 50px rgb(16, 175, 43, 0.863);
-    }
-}
-
-/* Media queries for mobile responsiveness */
-@media screen and (max-width: 768px) {
-
-    /* Adjust background for mobile */
-    body {
-        background-size: cover;
-    }
-
-    /* Reduce font size and image size for mobile */
-    h1 {
-        font-size: 1.8rem;
-        margin-bottom: 30px;
-    }
-
-    h2 {
-        font-size: 1.3rem;
-    }
-
-    .diwali_diyasLeft, .diwali_diyasRight {
-        width: 60px;
-        height: 60px;
-    }
-
-    .diyas {
-        width: 300px;
-        height: 180px;
-    }
-
-    /* Resize lights for mobile */
-    .lightsUpLeft, .lightsUpRight, .lightsDownLeft, .lightsDownRight {
-        width: 100px;
-        height: 100px;
-    }
-
-    /* Remove float and center the images */
-    .lightsUpLeft, .lightsUpRight, .lightsDownLeft, .lightsDownRight {
-        float: none;
-        margin: 10px auto;
-        display: block;
-    }
-
-    /* Ensure main content spacing is adjusted */
-    .main-content {
-        font-size: medium;
-    }
-}
+@keyframes animate1 {
+	0% {
+	  color: #fff;
+	  filter: blur(1px) hue-rotate(0deg);
+	  text-shadow: 0 0 10px #00b3ff, 0 0 10px #00b3ff, 0 0 20px #00b3ff,
+	    0 0 30px #00b3ff, 0 0 40px #00b3ff, 0 050px #00b3ff, 0 0 60px #00b3ff,
+	    0 0 400px #00b3ff;
+	}
+	30%,
+	70% {
+	  color: #fff;
+	  filter: blur(1px) hue-rotate(360deg);
+	  text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 30px #00b3ff,
+	    0 0 40px #00b3ff, 0 0 50px #00b3ff, 0 0 60px #00b3ff;
+	}
+	100% {
+	  color: transparent;
+	  box-shadow: none;
+	  filter: blur(1px) hue-rotate(0deg);
+	}
+      }
+@media screen and (max-width: 1000px) {
+  body{
+	  align-items: center;
+  }
+  }
